@@ -5,27 +5,19 @@ using namespace std;
 int main()
 {
 	int n = 0;
-	cout << "Masukkan jumlah baris segitiga pascal : ";
+	cout << "Masukkan tinggi segitiga : ";
 	cin >> n;
 
-	for (int i = 0; i <= n; i++) {
+	for (int i = 1; i <= n; i++) {
 
-		for (int s = 0; s <= n - i; s++) {
+		for (int s = i; s < n; s++) {
 			cout << " ";
 		}
 
-		int val = 1;
-		for (int j = 0; j < i; j++) {
+		for (int k = 1; k <= (2 * i - 1); k++) {
 			cout << "*";
-		}
-
-		for (int k = 0; k+1 < i; k++) {
-			cout << "*";
-
 		}
 		cout << endl;
 
 	}
 	return 0;
-}
-
